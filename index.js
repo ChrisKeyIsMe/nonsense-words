@@ -9,37 +9,41 @@ const makeWord = () => {
 let firstLetter = consonants[Math.floor(Math.random() * 21)];
 let secondLetter = vowels[Math.floor(Math.random() * 4)];
 let thirdLetter = consonants[Math.floor(Math.random() * 21)];
+let wordTest = firstLetter + secondLetter + thirdLetter;
+console.log(`Word generated: ${wordTest}`);
 
     //avoiding naughty words!
-    if(firstLetter === "s" && secondLetter === "e" && thirdLetter === "x"){
+    //short a words
+    if(wordTest == "fac" || wordTest == "fag" || wordTest == "gag" || wordTest == "hag" || wordTest == "fak" || wordTest == "fap" || wordTest == "was"){
+        console.log("Naughty word detected! Changing...");
         firstLetter = "l";
         secondLetter = "o";
         thirdLetter = "l";
-    }else if(firstLetter === "d" && secondLetter === "i" && thirdLetter === "k"){
+    } 
+    // short e words
+    else if (wordTest == "fec" || wordTest == "fek") {
+        console.log("Naughty word detected! Changing...");
         firstLetter = "l";
         secondLetter = "o";
         thirdLetter = "l";
-    }else if(firstLetter === "d" && secondLetter === "i" && thirdLetter === "c"){
+    } 
+    // short i words
+    else if (wordTest == "dic" || wordTest == "yid" || wordTest == "cig" || wordTest == "nig" || wordTest == "pig" || wordTest == "cil" || wordTest == "kil" || wordTest == "gin" || wordTest == "sin" || wordTest == "pis" || wordTest == "git" || wordTest == "hiv" || wordTest == "jiz" || wordTest == "piz") {
+        console.log("Naughty word detected! Changing...");
         firstLetter = "l";
         secondLetter = "o";
         thirdLetter = "l";
-    } else if (firstLetter === "f" && secondLetter === "u" && thirdLetter === "k"){
+    }
+    // short o words
+    else if (wordTest == "gob" || wordTest == "nob" || wordTest == "coc" || wordTest == "foc" || wordTest == "koc" || wordTest == "god" || wordTest == "sod" || wordTest == "cok" || wordTest == "fok" || wordTest == "kok") {
+        console.log("Naughty word detected! Changing...");
         firstLetter = "l";
         secondLetter = "o";
         thirdLetter = "l";
-    } else if (firstLetter === "f" && secondLetter === "u" && thirdLetter === "c"){
-        firstLetter = "l";
-        secondLetter = "o";
-        thirdLetter = "l";
-    } else if (firstLetter === "f" && secondLetter === "u" && thirdLetter === "x"){
-        firstLetter = "l";
-        secondLetter = "o";
-        thirdLetter = "l";
-    } else if (firstLetter === "d" && secondLetter === "i" && thirdLetter === "x"){
-        firstLetter = "l";
-        secondLetter = "o";
-        thirdLetter = "l";
-    } else if (firstLetter === "f" && secondLetter === "a" && thirdLetter === "g"){
+    }
+    // short u words
+    else if (wordTest == "cuc" || wordTest == "fuc" || wordTest == "kuc" || wordTest == "suc" || wordTest == "vuc" || wordTest == "fuf" || wordTest == "fug" || wordTest == "cuk" || wordTest == "fuk" || wordTest == "kuk" || wordTest == "suk" || wordTest == "vuk" || wordTest == "bum" || wordTest == "cum" || wordTest == "dum" || wordTest == "kum" || wordTest == "qum" || wordTest == "rum" || wordTest == "cun" || wordTest == "kun" || wordTest == "cus" || wordTest == "kus" || wordTest == "wus" || wordTest == "fut") {
+        console.log("Naughty word detected! Changing...");
         firstLetter = "l";
         secondLetter = "o";
         thirdLetter = "l";
